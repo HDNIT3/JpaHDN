@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <h1>${request.getAttribute("listcate")}</h1>
 	<table class="table table-striped table-bordered">
         <thead class="table-dark">
         <tr>
@@ -18,7 +19,7 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${categories}" var="cate" varStatus="STT">
+        <c:forEach items="${listcate}" var="cate" varStatus="STT">
             <tr>
                 <td>${STT.index + 1}</td>
                 <td>${cate.categoryname}</td>
