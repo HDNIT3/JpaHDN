@@ -13,7 +13,7 @@ import vn.iostar.entity.Category;
 import vn.iostar.services.CategoryService;
 import vn.iostar.services.impl.CategoryServiceImpl;
 
-@WebServlet(urlPatterns = {"/admin/categories"})
+@WebServlet(urlPatterns = {"/admin/category"})
 public class CategoryController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
@@ -22,7 +22,6 @@ public class CategoryController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Category> listCategory = cateService.findAll();
-		System.out.print(listCategory);
 		req.setAttribute("listcate", listCategory);
 		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/categories.jsp");
 		rd.forward(req, resp);

@@ -1,7 +1,5 @@
 package vn.iostar.entity;
 
-import java.io.Serializable;
-
 import org.hibernate.annotations.NamedQuery;
 
 import jakarta.persistence.*;
