@@ -10,4 +10,5 @@ public interface CategoryDao {
 	void update(Category category);
 	void delete(int id);
 	Category findById(int id);
+	List<Category> findByIdUser(long userid);
 }

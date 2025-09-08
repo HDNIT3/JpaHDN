@@ -80,4 +80,17 @@ public class CategoryDaoImpl implements CategoryDao {
             enma.close();
         }
     }
+
+	@Override
+	public List<Category> findByIdUser(long userid) {
+		 EntityManager enma = JpaConfig.getEntityManager();
+		    try {
+		        String jpql = "SELECT c FROM Category c WHERE c.user.id = :userId";
+		        TypedQuery<Category> query = enma.createQuery(jpql, Category.class);
+		        query.setParameter("userId", userid);
+		        return query.getResultList();
+		    } finally {
+		        enma.close();
+		    }
+	}
 }

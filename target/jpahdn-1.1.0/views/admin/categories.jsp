@@ -36,10 +36,10 @@
 								<c:url value="/image?imagename=${cate.images}" var="imageUrl"></c:url>
 								<td><img height="150" width="200" src="${imageUrl}" /></td>
 								<td>${cate.id}</td>
-								<td><a
-									href="<c:url value='/admin/category/edit?id=${cate.id}'/>"
-									class="btn btn-sm btn-warning me-2">Edit</a> <a
-									href="<c:url value='/admin/category/delete?id=${cate.id}'/>"
+								<td>
+									<a href="<c:url value='/admin/category/edit?id=${cate.id}'/>"
+									class="btn btn-sm btn-warning me-2">Edit</a> 
+									<a href="<c:url value='/admin/category/delete?id=${cate.id}'/>"
 									class="btn btn-sm btn-danger"
 									onclick="return confirm('Bạn có chắc muốn xóa category này?');">Delete</a>
 								</td>

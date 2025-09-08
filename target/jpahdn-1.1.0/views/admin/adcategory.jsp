@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/admin/category/create" method="post" enctype="multipart/form-data">
+	<form action="/jpahdn/admin/category/create" method="post" enctype="multipart/form-data">
 		<label>Nhập tên</label>
 		<input type="text" name="name">
 		<div class="mb-3">

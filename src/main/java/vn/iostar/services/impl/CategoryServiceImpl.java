@@ -35,4 +35,9 @@ public class CategoryServiceImpl implements CategoryService {
     public Category findById(int id) {
         return cateDao.findById(id);
     }
+
+	@Override
+	public List<Category> findByIdUser(long userid) {
+		return cateDao.findByIdUser(userid);
+	}
 }

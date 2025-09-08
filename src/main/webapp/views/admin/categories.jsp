@@ -35,11 +35,11 @@
 								<td class="fw-semibold">${cate.categoryname}</td>
 								<c:url value="/image?imagename=${cate.images}" var="imageUrl"></c:url>
 								<td><img height="150" width="200" src="${imageUrl}" /></td>
-								<td>${cate.id}</td>
+								<td>${cate.category_id}</td>
 								<td>
-									<a href="<c:url value='/admin/category/edit?id=${cate.id}'/>"
+									<a href="<c:url value='/admin/category/edit?id=${cate.category_id}'/>"
 									class="btn btn-sm btn-warning me-2">Edit</a> 
-									<a href="<c:url value='/admin/category/delete?id=${cate.id}'/>"
+									<a href="<c:url value='/admin/category/delete?id=${cate.category_id}'/>"
 									class="btn btn-sm btn-danger"
 									onclick="return confirm('Bạn có chắc muốn xóa category này?');">Delete</a>
 								</td>
@@ -49,6 +49,9 @@
 				</table>
 				<form action="/jpahdn/admin/category/create" method="get" style="display: inline;">
 					<button type="submit" class="btn btn-link p-0 m-0">Thêm Category</button>
+				</form>
+				<form action="/jpahdn/logout" method="get" style="display: inline;">
+					<button type="submit" class="btn btn-link p-0 m-0">Đăng xuất</button>
 				</form>
 			</div>
 		</div>
